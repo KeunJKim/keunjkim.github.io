@@ -32,6 +32,24 @@ nav a{margin-left:0;font-size:13px}nav a:focus-visible,.card:focus-visible,.blog
 .blog-action:hover{background:#356b87}
 @media(max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.cards{grid-template-columns:1fr;margin-top:30px}.card{min-height:0;padding:18px}.navlinks{justify-content:flex-start!important}.blog-actions{flex-direction:column}.blog-action{text-align:center}}
+
+/* 메뉴 테두리와 접근성 정리: 글자 크기는 기존대로 유지 */
+header{padding:18px 0}
+nav .navlinks{gap:7px 9px}
+nav .navlinks a{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin:0;padding:6px 11px;min-height:33px;
+  font-size:13px;line-height:1.45;white-space:nowrap;
+  border:1px solid rgba(196,226,240,.58);border-radius:999px;
+  background:rgba(29,70,96,.42);color:#e8f2f8;
+  transition:background .18s,border-color .18s,transform .18s;
+}
+nav .navlinks a:hover{background:#315e78;border-color:#ffdda0;color:#fff;transform:translateY(-1px)}
+nav .navlinks a:focus-visible{outline:3px solid #ffe0a4;outline-offset:3px}
+.card{transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{box-shadow:0 14px 26px #07162365}
+@media(max-width:700px){header{padding:14px 0}nav .navlinks{justify-content:flex-start;gap:7px}}
+
 </style>
 </head>
 <body>
